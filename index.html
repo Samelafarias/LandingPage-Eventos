@@ -18,14 +18,64 @@
 
   <!-- cabeçalho da página -->
   <header class="cabecalho">
+    <a href="index.html">
     <img src="img/logo.svg" class="logo"/>
+    </a>
     <nav class="menu">
+
+    <!-- barra de pesquisa -->
+    <div class="search-box">
+      <input type="text" placeholder="Pesquisar..." />
+      <button class="search-btn">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+
       <a href="#" class="btn btn-cadastrar">Cadastrar</a>
       <a href="#" class="btn btn-login">Login</a>
       <i class="bi bi-moon-stars-fill" id="btn-dark-mode"></i>
       <i class="bi bi-circle-half"></i>
     </nav>
   </header>
+
+  <!-- Seção de Cadastro -->
+  <div id="modal-cadastro" class="modal">
+    <div class="modal-content">
+      <span class="fechar">&times;</span>
+      <img src="img/logo-white2.svg" class="logo-cadastro" />
+      <p>Cadastre-se e garanta o seu ingresso para o melhor festival da história!</p>
+
+      <form class="form-cadastro">
+        <div class="form-group">
+          <label>Nome:</label>
+          <input type="text" placeholder="Digite seu nome" required>
+        </div>
+        <div class="form-group">
+          <label>E-mail:</label>
+          <input type="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <div class="form-group">
+          <label>Telefone:</label>
+          <input type="tel" placeholder="Digite seu telefone" required>
+        </div>
+        <div class="form-group">
+          <label>Data de <br> Nascimento:</label>
+          <input type="date" required>
+        </div>
+        <div class="form-group">
+          <label>Senha:</label>
+          <input type="password" required>
+        </div>
+        <div class="form-group">
+          <label>Confirmar Senha:</label>
+          <input type="password" required>
+        </div>
+        <button type="submit" class="btn-cadastrar-modal">Cadastrar</button>
+      </form>
+
+      <p class="login-link">Já possui cadastro? <a href="#">Logar</a></p>
+    </div>
+  </div>
   
   <!-- banner principal -->
   <section class="banner-principal">
@@ -37,24 +87,45 @@
 
   <!-- seção dos locais -->
   <section class="locais">
-    <h2 class="texto-locais">Locais do Evento</h2>
-    <div class="lista-cidades">
-      <div class="cidade">Cidade X</div>
-      <div class="cidade">Cidade X</div>
-      <div class="cidade">Cidade X</div>
-      <div class="cidade">Cidade X</div>
-      <div class="cidade">Cidade X</div>
-      <div class="cidade">Cidade X</div>
-      <div class="cidade">Cidade X</div>
-      <div class="cidade">Cidade X</div>
-      <div class="cidade">Cidade X</div>
+    <h2 class="texto-locais">Sobre o Evento</h2>
+    <p class="descrição">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod ad id nam incidunt provident necessitatibus explicabo, consequatur, voluptatum qui illo sapiente hic nobis repudiandae maiores saepe obcaecati animi blanditiis asperiores? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nam officia fuga rerum quaerat enim tempore magnam non ullam adipisci iure excepturi consequatur, recusandae laudantium repudiandae fugit laborum ipsa. Exercitationem!</p>
+
+    <div class="info-evento">
+      <div class="info-item">
+        <i class="bi bi-calendar"></i>
+        <span>17 de Setembro de 2025</span>
+      </div>
+      <div class="info-item">
+        <i class="bi bi-geo-alt-fill"></i>
+        <span>Local do Evento</span>
+      </div>
     </div>
   </section>
 
   <!-- carrossel -->
   <section class="carrossel">
-    <div class="carrossel-imagem">[Imagem]</div>
-    <div class="carrossel-detalhe">● ● ●</div>
+    <div class="carrossel-container">
+      <div class="carrossel-slide active">
+        <img src="img/show.jpg" alt="Imagem 1">
+      </div>
+      <div class="carrossel-slide">
+        <img src="img/show2.jpg" alt="Imagem 2">
+      </div>
+      <div class="carrossel-slide">
+        <img src="img/show3.jpeg" alt="Imagem 3">
+      </div>
+
+      <!-- setas -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+
+    <!-- indicadores -->
+    <div class="carrossel-detalhe">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
   </section>
 
   <!-- seção de ingressos -->
@@ -63,16 +134,23 @@
     <div class="lista-ingressos">
       <div class="ingresso">
         <div class="imagem-ingresso">[Imagem]</div>
+        <p class="preco-ingresso">R$ 100</p>
         <button class="botao-comprar">Comprar</button>
       </div>
       <div class="ingresso">
         <div class="imagem-ingresso">[Imagem]</div>
+        <p class="preco-ingresso">R$ 100</p>
         <button class="botao-comprar">Comprar</button>
       </div>
       <div class="ingresso">
         <div class="imagem-ingresso">[Imagem]</div>
+        <p class="preco-ingresso">R$ 100</p>
         <button class="botao-comprar">Comprar</button>
       </div>
+    </div>
+
+    <div class="mais-opcoes">
+      <button class="botao-mais">Mais opções de ingresso</button>
     </div>
   </section>
 
@@ -109,23 +187,28 @@
         </div>
       </div>
     </div>
+
+    <div class="mais-atracoes">
+      <button class="botao-atracoes">Confira mais atrações</button>
+    </div>
   </section>
 
-<!-- seção redes sociais -->
-<section class="fique-por-dentro">
-  <h2 class="texto-fpd">Fique por dentro</h2>
-  <div class="linha-tempo">
-    <div class="social-icon">
-      <i class="bi bi-instagram"></i>
+
+  <!-- seção redes sociais -->
+  <section class="fique-por-dentro">
+    <h2 class="texto-fpd">Fique por dentro</h2>
+    <div class="linha-tempo">
+      <div class="social-icon">
+        <i class="bi bi-instagram"></i>
+      </div>
+      <div class="social-icon">
+        <i class="bi bi-facebook"></i>
+      </div>
+      <div class="social-icon">
+        <i class="bi bi-twitter-x"></i>
+      </div>
     </div>
-    <div class="social-icon">
-      <i class="bi bi-facebook"></i>
-    </div>
-    <div class="social-icon">
-      <i class="bi bi-twitter-x"></i>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- seção dos patrocinadores -->
   <section class="patrocinadores">
@@ -207,22 +290,19 @@
   <!-- final da seção do organizador -->
 
   <!-- rodapé da página -->
-<footer class="rodape">
-  <div class="contatos">
-    <h2>Contatos</h2>
-    <br>
-    <p><i class="bi bi-whatsapp"></i> (00) 00000-0000</p>
-    
-    <p><i class="bi bi-telephone-fill"></i> (00) 0000-0000</p>
-    
-    <p><i class="bi bi-envelope-fill"></i> email@.com</p>
-    
-    <p><i class="bi bi-headset"></i> emailsuporte@.com</p>
-  </div>
+  <footer class="rodape">
+    <div class="contatos">
+      <h2>Contatos</h2>
+      <br>
+      <p><i class="bi bi-whatsapp"></i> (00) 00000-0000</p>
+      <p><i class="bi bi-telephone-fill"></i> (00) 0000-0000</p>
+      <p><i class="bi bi-envelope-fill"></i> email@.com</p>
+      <p><i class="bi bi-headset"></i> emailsuporte@.com</p>
+    </div>
+
+    <p class="direitos">© 2025 AstroFest. Todos os direitos reservados.</p>
 
     <img src="img/logo-white.svg" class="logo-rodape"/>
-
-
   </footer>
 
   <script src="script.js"></script>
