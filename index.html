@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evento</title>
+  <title>AstroFest</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo-titulo.svg">
   <!-- código da fonte usada -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- código do bootstrap icons -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   
    <link rel="stylesheet" href="style.css">
 </head>
@@ -15,10 +18,12 @@
 
   <!-- cabeçalho da página -->
   <header class="cabecalho">
-    <div class="logo">Logo</div>
+    <img src="img/logo.svg" class="logo"/>
     <nav class="menu">
       <a href="#" class="btn btn-cadastrar">Cadastrar</a>
       <a href="#" class="btn btn-login">Login</a>
+      <i class="bi bi-moon-stars-fill" id="btn-dark-mode"></i>
+      <i class="bi bi-circle-half"></i>
     </nav>
   </header>
   
@@ -26,7 +31,7 @@
   <section class="banner-principal">
     <div class="conteudo">
       <button class="botao-ingresso">Garanta o seu Ingresso</button>
-      <div class="contador">Faltam 00 : 00 : 00 para nome do evento</div>
+      <div class="contador">Faltam 00 : 00 : 00 para o AstroFest</div>
     </div>
   </section>
 
@@ -106,15 +111,21 @@
     </div>
   </section>
 
-  <!-- seção redes sociais -->
-  <section class="fique-por-dentro">
-    <h2 class="texto-fpd">Fique por dentro</h2>
-    <div class="linha-tempo">
-      <img src="img/instagram.svg" class="etapa"></img>
-      <img src="img/facebook.svg" class="etapa"></img>
-      <img src="img/twitter.svg" class="etapa"></img>
+<!-- seção redes sociais -->
+<section class="fique-por-dentro">
+  <h2 class="texto-fpd">Fique por dentro</h2>
+  <div class="linha-tempo">
+    <div class="social-icon">
+      <i class="bi bi-instagram"></i>
     </div>
-  </section>
+    <div class="social-icon">
+      <i class="bi bi-facebook"></i>
+    </div>
+    <div class="social-icon">
+      <i class="bi bi-twitter-x"></i>
+    </div>
+  </div>
+</section>
 
   <!-- seção dos patrocinadores -->
   <section class="patrocinadores">
@@ -204,7 +215,7 @@
       <p>emailsuporte@.com</p>
     </div>
 
-    <div class="logo-rodape">Logo</div>
+    <img src="img/logo-white.svg" class="logo-rodape"/>
 
 
   </footer>

@@ -7,8 +7,8 @@
 }
 
 body {
-  background: #181818;
-  color: #333;
+  background: #fdfdfd;
+  color: #222;
   line-height: 1.5;
 }
 
@@ -18,19 +18,19 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background-color: #09040a;
+  background-color: white;
 }
 
 .cabecalho .logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .menu a {
-  margin-left: 20px;
+  margin-left: 10px;
   text-decoration: none;
-  color: #ffffff;
+  color: white;
   font-weight: 500;
 }
 
@@ -43,19 +43,33 @@ body {
 }
 
 .menu .btn-cadastrar {
-  background: #777;
+  background: #ccc;
+  color: #000;
 }
 
 .menu .btn-cadastrar:hover {
-  background: #555;
+  background: #aaa;
 }
 
 .menu .btn-login {
-  background:#088478;
+  background: #088478;
+  color: #fff;
 }
 
 .menu .btn-login:hover {
   background: #066c61;
+}
+
+.menu i {
+  font-size: 20px;
+  color: black;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.menu i:hover {
+  color: #088478;
 }
 
 /* banner principal */
@@ -115,7 +129,7 @@ body {
 .texto-atracoes,
 .texto-fpd {
   font-size: 26px;
-  color: white;
+  color: black;
 }
 
 .lista-cidades {
@@ -170,8 +184,8 @@ body {
 }
 
 .ingresso {
-  background: #09040a;
-  color: white;
+  background: #ccc;
+  color: #000;
   padding: 20px;
   width: 220px;
   border-radius: 15px;
@@ -180,7 +194,7 @@ body {
 .imagem-ingresso {
   width: 100%;
   height: 140px;
-  background: #222;
+  background: #ddd;
   margin-bottom: 15px;
   border-radius: 10px;
 }
@@ -217,15 +231,15 @@ body {
 
 .atracao {
   width: 220px;
-  background: #09040a;
+  background: #ccc;
   border-radius: 12px;
-  color: white;
+  color: black;
   overflow: hidden;
 }
 
 .imagem-atracao {
   height: 120px;
-  background: #444;
+  background: #ddd;
 }
 
 .info-atracao {
@@ -246,18 +260,26 @@ body {
   margin-top: 20px;
 }
 
-.etapa {
+.social-icon {
   width: 70px;
   height: 70px;
-  object-fit: contain;
   border-radius: 50%;
   background: #088478;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px;
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.etapa:hover {
+.social-icon:hover {
   background: #066c61;
+}
+
+.social-icon i {
+  font-size: 36px;
+  color: white;
 }
 
 /* patrocinadores */
@@ -278,24 +300,24 @@ body {
   height: 70px;
   object-fit: contain;
   border-radius: 50%;
-  background: white;
+  background: #ddd;
   padding: 5px;
 }
 
 /* organizador */
 .organizador {
-  padding: 40px 20px;
+  padding: 40px 30px;
   text-align: center;
-  background: #09040a;
+  background: #ccc;
   border-radius: 12px;
   margin: 40px auto;
   max-width: 900px;
-  color: white;
 }
 
 .organizador h2 {
   margin-bottom: 20px;
   font-size: 24px;
+  color: black;
 }
 
 .busca-participantes {
@@ -307,7 +329,7 @@ body {
 
 .busca-participantes input {
   padding: 10px;
-  width: 500px;
+  width: 600px;
   border: none;
   border-radius: 8px;
   outline: none;
@@ -341,9 +363,9 @@ body {
 
 .tabela-participantes th,
 .tabela-participantes td {
-  border: 1px solid #066c61;
-  background: #09040a;
-  color: white;
+  border: 1px solid #ccc;
+  background: #ddd;
+  color: black;
   padding: 12px 15px;
   text-align: left;
 }
@@ -377,27 +399,25 @@ body {
 
 .paginacao a {
   text-decoration: none;
-  color: white;
+  color: black;
   padding: 6px 12px;
   border-radius: 5px;
-  background: #09040a;
   font-weight: bold;
   transition: 0.3s ease;
 }
 
 .paginacao a:hover {
-  background: #088478;
+  background: #777;
 }
 
 .paginacao a.ativo {
-  background: #09040a;
-  border: 1px solid #088478;
+  background: #088478;
   color: #fff;
 }
 
 /* rodapé */
 .rodape {
-  background: #09040a;
+  background: #1f1f1f;
   padding: 30px 40px;
   display: flex;
   justify-content: space-between;
@@ -410,7 +430,111 @@ body {
 }
 
 .logo-rodape {
-  font-size: 20px;
-  font-weight: bold;
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* modo escuro */
+body.dark-mode {
+  background: #181818;
+  color: #eee;
+}
+
+body.dark-mode .cabecalho {
+  background-color: #09040a;
+}
+
+body.dark-mode .cabecalho .logo {
+  content: url("img/logo-white.svg");
+}
+
+body.dark-mode .menu a {
+  color: #fff;
+}
+
+body.dark-mode .menu .btn-cadastrar {
+  background: #777;
+  color: #fff;
+}
+
+body.dark-mode .menu .btn-cadastrar:hover {
+  background: #555;
+}
+
+body.dark-mode .menu i {
+  color: #fff;
+}
+
+body.dark-mode .menu i:hover {
+  color: #088478;
+}
+
+body.dark-mode .texto-locais,
+body.dark-mode .texto-ingressos,
+body.dark-mode .texto-atracoes,
+body.dark-mode .texto-fpd {
+  color: white;
+}
+
+body.dark-mode .ingresso,
+body.dark-mode .atracao,
+body.dark-mode .organizador {
+  background: #09040a;
+  color: white;
+}
+
+body.dark-mode .social-icon {
+  background: black;
+}
+
+body.dark-mode .social-icon:hover {
+  background: #066c61;
+}
+
+body.dark-mode .organizador h2 {
+  color: white;
+}
+
+body.dark-mode .imagem-ingresso {
+  background: #222;
+}
+
+body.dark-mode .imagem-atracao {
+  background: #444;
+}
+
+body.dark-mode .tabela-participantes {
+  background: white;
+  color: black;
+}
+
+body.dark-mode .tabela-participantes td {
+  border: 1px solid #2b2b2b;
+  background: #09040a;
+  color: white;
+}
+
+body.dark-mode .paginacao a {
+  color: white;
+  background: #09040a;
+}
+
+body.dark-mode .paginacao a:hover {
+  background: #088478;
+}
+
+body.dark-mode .paginacao a.ativo {
+  background: #09040a;
+  border: 1px solid #088478;
+  color: #fff;
+}
+
+body.dark-mode .rodape {
+  background: #09040a;
+}
+
+body.dark-mode .rodape .contatos,
+body.dark-mode .logo-rodape {
   color: white;
 }
