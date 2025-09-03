@@ -23,7 +23,14 @@
     </a>
     <nav class="menu">
 
-    <!-- barra de pesquisa -->
+    <!-- ícone do menu mobile -->
+      <div class="menu-toggle">
+        <i class="bi bi-list" id="open-menu"></i>
+      </div>
+    </nav>
+
+    <!-- menu desktop -->
+     <nav class="menu menu-desktop">
     <div class="search-box">
       <input type="text" placeholder="Pesquisar..." />
       <button class="search-btn">
@@ -37,6 +44,33 @@
       <i class="bi bi-circle-half"></i>
     </nav>
   </header>
+
+    <!-- menu mobile -->
+  <nav class="menu-mobile" id="menu-mobile">
+    <div class="menu-header">
+      <i class="bi bi-x" id="close-menu"></i>
+    </div>
+
+    <!-- barra de pesquisa -->
+    <div class="search-box">
+      <input type="text" placeholder="Pesquisar..." />
+      <button class="search-btn">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+
+    <!-- botões lado a lado -->
+    <div class="mobile-buttons">
+      <a href="#" class="btn btn-cadastrar">Cadastrar</a>
+      <a href="#" class="btn btn-login">Login</a>
+    </div>
+
+    <!-- ícones no final -->
+    <div class="mobile-footer-icons">
+      <i class="bi bi-moon-stars-fill" id="btn-dark-mode-mobile"></i>
+      <i class="bi bi-circle-half" id="btn-contrast-mode-mobile"></i>
+    </div>
+  </nav>
 
   <!-- Seção de Cadastro -->
   <div id="modal-cadastro" class="modal">
@@ -158,6 +192,7 @@
   <section class="atracoes">
     <h2 class="texto-atracoes">Principais atrações</h2>
     <div class="lista-atracoes">
+
       <div class="atracao">
         <div class="imagem-atracao">[Imagem]</div>
         <div class="info-atracao">
@@ -165,6 +200,7 @@
           <p>descrição das informações descrição das informações descrição das informações</p>
         </div>
       </div>
+
       <div class="atracao">
         <div class="imagem-atracao">[Imagem]</div>
         <div class="info-atracao">
@@ -172,6 +208,7 @@
           <p>descrição das informações descrição das informações descrição das informações</p>
         </div>
       </div>
+
       <div class="atracao">
         <div class="imagem-atracao">[Imagem]</div>
         <div class="info-atracao">
@@ -179,13 +216,7 @@
           <p>descrição das informações descrição das informações descrição das informações</p>
         </div>
       </div>
-      <div class="atracao">
-        <div class="imagem-atracao">[Imagem]</div>
-        <div class="info-atracao">
-          <h3>Informações</h3>
-          <p>descrição das informações descrição das informações descrição das informações</p>
-        </div>
-      </div>
+
     </div>
 
     <div class="mais-atracoes">

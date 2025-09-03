@@ -1,8 +1,8 @@
 // modo escuro
-const darkModeBtn = document.getElementById ("btn-dark-mode");
-
-darkModeBtn.addEventListener("click", () => {
-document.body.classList.toggle("dark-mode");
+document.querySelectorAll("#btn-dark-mode, #btn-dark-mode-mobile").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
 });
 
 // carrossel
@@ -47,20 +47,20 @@ let index = 0;
   const btn = document.querySelector(".btn-cadastrar");
   const span = document.querySelector(".fechar");
 
-  // Abrir modal
+  // abrir modal
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     modal.style.display = "flex";
     document.body.style.overflow = "hidden";
   });
 
-  // Fechar modal ao clicar no X
+  // fechar modal ao clicar no X
   span.addEventListener("click", () => {
     modal.style.display = "none";
     document.body.style.overflow = "";
   });
 
-  // Fechar modal ao clicar fora dela
+  // fechar modal ao clicar fora dela
   window.addEventListener("click", (e) => {
     if (e.target === modal) {
       modal.style.display = "none";
@@ -299,4 +299,36 @@ inputBusca.addEventListener('input', buscarParticipantes);
 //inicializar
 document.addEventListener('DOMContentLoaded', () => {
   atualizarExibicao();
+});
+
+
+// seção do menu mobile
+const openMenu = document.getElementById("open-menu");
+const closeMenu = document.getElementById("close-menu");
+const menuMobile = document.getElementById("menu-mobile");
+
+// abre menu
+openMenu.addEventListener("click", () => {
+  menuMobile.style.display = "flex";
+  openMenu.style.display = "none";
+  closeMenu.style.display = "block";
+  document.body.style.overflow = "hidden";
+});
+
+// fecha menu
+closeMenu.addEventListener("click", () => {
+menuMobile.style.display = "none";
+openMenu.style.display = "block";
+closeMenu.style.display = "none";
+document.body.style.overflow = "auto";
+});
+
+// se a tela for redimensionada para desktop, fecha o menu mobile automaticamente
+window.addEventListener("resize", () => {
+if (window.innerWidth > 768) {
+menuMobile.style.display = "none";
+openMenu.style.display = "block";
+closeMenu.style.display = "none";
+document.body.style.overflow = "auto";
+}
 });
