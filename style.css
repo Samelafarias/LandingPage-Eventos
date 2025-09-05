@@ -1243,6 +1243,10 @@ body.alto-contraste .info-atracao h3 {
   color: #ff0;
 }
 
+body.alto-contraste .info-atracao p {
+  color: #fff;
+}
+
 body.alto-contraste .ingresso,
 body.alto-contraste .atracao,
 body.alto-contraste .organizador {
@@ -1293,6 +1297,25 @@ body.alto-contraste .organizador h2 {
   color: #ff0;
 }
 
+body.alto-contraste .botao-buscar {
+  background: #ff0;
+  color: #000;
+}
+
+body.alto-contraste .botao-buscar:hover {
+  background-color: #fff;
+}
+
+body.alto-contraste .botao-excluir {
+  background: #ff0;
+  color: #000;
+  font-weight: bold;
+}
+
+body.alto-contraste .botao-excluir:hover {
+  background: #fff;
+}
+
 /* tabelas */
 body.alto-contraste .tabela-participantes {
   background: #000 !important;
@@ -1301,8 +1324,9 @@ body.alto-contraste .tabela-participantes {
 }
 
 body.alto-contraste .tabela-participantes th {
-  background: #ff0 !important;
-  color: #000 !important;
+  border: 1px solid #ff0 !important;
+  background-color: #000;
+  color: #ff0 !important;
 }
 
 body.alto-contraste .tabela-participantes td {
@@ -1359,13 +1383,15 @@ body.alto-contraste .menu-mobile .mobile-buttons a {
 }
 
 body.alto-contraste .menu-mobile .btn-cadastrar {
-  background: #fff !important;
+  background: #ff0 !important;
   color: #000 !important;
+  font-weight: bold;
 }
 
 body.alto-contraste .menu-mobile .btn-login {
   background: #ff0 !important;
   color: #000 !important;
+  font-weight: bold;
 }
 
 body.alto-contraste .menu-mobile .btn-cadastrar:hover,
