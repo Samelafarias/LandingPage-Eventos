@@ -105,7 +105,6 @@ body {
   color: #088478;
 }
 
-
 .menu {
   display: flex;
   align-items: center;
@@ -468,6 +467,7 @@ body {
 .ingressos {
   padding: 50px 20px;
   text-align: center;
+  background: #fff;
 }
 
 .lista-ingressos {
@@ -479,19 +479,43 @@ body {
 }
 
 .ingresso {
-  background: linear-gradient(#181818, #088478, #1f1f1f);
-  color: #000;
+  background: linear-gradient(135deg, #181818, #088478, #1f1f1f);
+  color: #fff;
   padding: 20px;
   width: 320px;
   border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.imagem-ingresso {
-  width: 100%;
-  height: 340px;
-  background: #ddd;
+.ingresso:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.7);
+}
+
+.nome-ingresso {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.descricao-ingresso {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #dcdcdc;
+  text-align: center;
+}
+
+.beneficios-ingresso {
+  font-size: 14px;
   margin-bottom: 15px;
-  border-radius: 10px;
+  color: #ffecb3;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .preco-ingresso {
@@ -561,13 +585,41 @@ body {
 }
 
 .imagem-atracao {
-  height: 220px;
-  background: #ddd;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.atracao1 {
+  background-image: url("img/leo-magalhaes.jpg");
+}
+
+.atracao2 {
+  background-image: url("img/cachorrao-do-brega.jpg");
+}
+
+.atracao3 {
+  background-image: url("img/amado-batista.jpg");
 }
 
 .info-atracao {
   padding: 15px;
   text-align: left;
+  background-color: #1f1f1f;
+}
+
+.info-atracao h3 {
+    font-size: 20px;
+    color: #e60160;
+}
+
+.info-atracao h3:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.info-atracao p {
+    color: #aaa;
 }
 
 .mais-atracoes {
@@ -936,12 +988,33 @@ body.dark-mode .organizador h2 {
   color: white;
 }
 
-body.dark-mode .imagem-ingresso {
-  background: #222;
+body.dark-mode .ingressos {
+  background: #181818;
 }
 
 body.dark-mode .imagem-atracao {
-  background: #444;
+  background-size: cover;
+  background-position: center;
+}
+
+body.dark-mode .atracao1 {
+  background-image: url("img/leo-magalhaes.jpg");
+}
+
+body.dark-mode .atracao2 {
+  background-image: url("img/cachorrao-do-brega.jpg");
+}
+
+body.dark-mode .atracao3 {
+  background-image: url("img/amado-batista.jpg");
+}
+
+body.dark-mode .info-atracao {
+  background-color: #000;
+}
+
+body.dark-mode .info-atracao h3 {
+    color: #009688;
 }
 
 body.dark-mode .tabela-participantes {
@@ -1030,6 +1103,293 @@ body.dark-mode .menu-mobile i:hover {
   color: #088478;
 }
 
+/* alto contraste */
+body.alto-contraste {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* cabeçalho */
+body.alto-contraste .cabecalho {
+  background: #000 !important;
+}
+
+body.alto-contraste .cabecalho .logo {
+  filter: invert(1);
+}
+
+body.alto-contraste .menu a {
+  color: #ff0 !important;
+}
+
+body.alto-contraste .cabecalho i {
+  color: #ff0 !important;
+}
+
+/* botão de cadastrar */
+body.alto-contraste .menu a.btn-cadastrar {
+  background: #ff0 !important;
+  color: #000 !important;
+}
+
+body.alto-contraste .menu a.btn-cadastrar:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+/* botão Login */
+body.alto-contraste .menu a.btn-login {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+body.alto-contraste .menu a.btn-login:hover {
+  background: #ff0 !important;
+  color: #000 !important;
+}
+
+/* caixas de busca */
+body.alto-contraste .search-box {
+  background: #000 !important;
+  border: 2px solid #ff0 !important;
+}
+
+body.alto-contraste .search-box input {
+  color: #ff0 !important;
+}
+
+body.alto-contraste .search-box .search-btn {
+  color: #ff0 !important;
+}
+
+/* modal de cadastro */
+body.alto-contraste .modal-content {
+  background: #000 !important;
+  color: #ff0 !important;
+  border: 2px solid #ff0 !important;
+}
+
+body.alto-contraste .modal-content .fechar {
+  color: #ff0 !important;
+}
+
+body.alto-contraste .form-group label {
+  color: #ff0 !important;
+}
+
+body.alto-contraste .form-group input {
+  background: #000 !important;
+  border: 2px solid #ff0 !important;
+  color: #ff0 !important;
+}
+
+body.alto-contraste .btn-cadastrar-modal {
+  background: #ff0 !important;
+  color: #000 !important;
+  font-weight: bold;
+}
+
+body.alto-contraste .btn-cadastrar-modal:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+body.alto-contraste .login-link a {
+  color: #ff0 !important;
+}
+
+/* banner principal */
+body.alto-contraste .banner-principal .botao-ingresso {
+  background-color: #ff0;
+  color: #000;
+}
+
+body.alto-contraste .banner-principal .botao-ingresso:hover {
+  background-color: #fff;
+}
+
+body.alto-contraste .banner-principal .contador {
+  color: #ff0;
+}
+
+/* ícones das seções */
+body.alto-contraste .info-item {
+  color: #ff0 !important;
+}
+
+body.alto-contraste .info-item i {
+  color: #ff0 !important;
+}
+
+/* banners e textos */
+body.alto-contraste .texto-locais,
+body.alto-contraste .texto-ingressos,
+body.alto-contraste .texto-atracoes,
+body.alto-contraste .texto-fpd {
+  color: #ff0 !important;
+}
+
+/* ingressos, atrações, organizador */
+body.alto-contraste .ingressos {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.alto-contraste .info-atracao {
+  background-color: #000;
+}
+
+body.alto-contraste .info-atracao h3 {
+  color: #ff0;
+}
+
+body.alto-contraste .ingresso,
+body.alto-contraste .atracao,
+body.alto-contraste .organizador {
+  background: #000 !important;
+  border: 2px solid #ff0 !important;
+  color: #fff !important;
+}
+
+body.alto-contraste .ingresso .botao-comprar,
+body.alto-contraste .botao-mais,
+body.alto-contraste .botao-atracoes {
+  background: #ff0 !important;
+  color: #000 !important;
+}
+
+body.alto-contraste .ingresso .botao-comprar:hover,
+body.alto-contraste .botao-mais:hover,
+body.alto-contraste .botao-atracoes:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+/* redes sociais */
+body.alto-contraste .linha-tempo::before {
+  background: #ff0; 
+}
+
+body.alto-contraste .social-icon {
+  background-color: #ff0 
+}
+
+body.alto-contraste .social-icon:hover {
+  background-color: #fff;
+}
+
+body.alto-contraste .social-icon i {
+    color: #000; 
+}
+
+/* organizador */
+body.alto-contraste .busca-participantes input {
+  background-color: #000;
+  color: #ff0;
+  border: 2px solid #ff0;
+}
+
+body.alto-contraste .organizador h2 {
+  color: #ff0;
+}
+
+/* tabelas */
+body.alto-contraste .tabela-participantes {
+  background: #000 !important;
+  border: 2px solid #ff0 !important;
+  color: #fff !important;
+}
+
+body.alto-contraste .tabela-participantes th {
+  background: #ff0 !important;
+  color: #000 !important;
+}
+
+body.alto-contraste .tabela-participantes td {
+  background: #000 !important;
+  color: #fff !important;
+  border: 1px solid #ff0 !important;
+}
+
+/* paginação */
+body.alto-contraste .paginacao a {
+  background: #000 !important;
+  border: 2px solid #ff0 !important;
+  color: #ff0 !important;
+}
+
+body.alto-contraste .paginacao a:hover {
+  background: #fff !important;
+  border: 2px solid #ff0 !important;
+  color: #000 !important;
+}
+
+body.alto-contraste .paginacao a.ativo {
+  background: #ff0 !important;
+  color: #000 !important;
+}
+
+/* rodapé */
+body.alto-contraste .rodape {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.alto-contraste .rodape .contatos,
+body.alto-contraste .rodape .direitos {
+  color: #ff0 !important;
+}
+
+body.alto-contraste .rodape i {
+  color: #ff0 !important;
+}
+
+/* alto contraste menu mobile */
+body.alto-contraste .menu-mobile {
+  background: #000 !important;
+  border-left: 2px solid #ff0 !important;
+}
+
+body.alto-contraste .menu-mobile .menu-header i {
+  color: #ff0 !important;
+}
+
+body.alto-contraste .menu-mobile .mobile-buttons a {
+  border: 2px solid #ff0 !important;
+}
+
+body.alto-contraste .menu-mobile .btn-cadastrar {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+body.alto-contraste .menu-mobile .btn-login {
+  background: #ff0 !important;
+  color: #000 !important;
+}
+
+body.alto-contraste .menu-mobile .btn-cadastrar:hover,
+body.alto-contraste .menu-mobile .btn-login:hover {
+  filter: brightness(0.8);
+}
+
+body.alto-contraste .menu-mobile .search-box {
+  border: 2px solid #ff0 !important;
+}
+
+body.alto-contraste .menu-mobile .search-box input {
+  background: #000 !important;
+  color: #ff0 !important;
+}
+
+body.alto-contraste .menu-mobile .search-btn {
+  color: #ff0 !important;
+}
+
+body.alto-contraste .menu-mobile .mobile-footer-icons i {
+  color: #ff0 !important;
+}
+
 /* responsividade do menu mobile */
 @media (max-width: 1000px) {
   .menu-desktop {
@@ -1038,6 +1398,19 @@ body.dark-mode .menu-mobile i:hover {
 
   .menu-toggle {
     display: block;
+  }
+}
+
+/* responsividade ingressos */
+@media (max-width: 1024px) {
+  .lista-ingressos {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ingresso {
+    width: 90%;
   }
 }
 

@@ -41,7 +41,7 @@
       <a href="#" class="btn btn-cadastrar">Cadastrar</a>
       <a href="#" class="btn btn-login">Login</a>
       <i class="bi bi-moon-stars-fill" id="btn-dark-mode"></i>
-      <i class="bi bi-circle-half"></i>
+      <i class="bi bi-circle-half" id="btn-contrast-desktop"></i>
     </nav>
   </header>
 
@@ -68,7 +68,7 @@
     <!-- ícones no final -->
     <div class="mobile-footer-icons">
       <i class="bi bi-moon-stars-fill" id="btn-dark-mode-mobile"></i>
-      <i class="bi bi-circle-half" id="btn-contrast-mode-mobile"></i>
+      <i class="bi bi-circle-half" id="btn-contrast-mobile"></i>
     </div>
   </nav>
 
@@ -122,16 +122,16 @@
   <!-- seção dos locais -->
   <section class="locais">
     <h2 class="texto-locais">Sobre o Evento</h2>
-    <p class="descrição">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod ad id nam incidunt provident necessitatibus explicabo, consequatur, voluptatum qui illo sapiente hic nobis repudiandae maiores saepe obcaecati animi blanditiis asperiores? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nam officia fuga rerum quaerat enim tempore magnam non ullam adipisci iure excepturi consequatur, recusandae laudantium repudiandae fugit laborum ipsa. Exercitationem!</p>
+    <p class="descrição">AstroFest é um festival pensado para reunir pessoas em uma experiência única. O evento traz uma programação variada com diversas atrações que prometem encantar do início ao fim. Mais do que um festival, o AstroFest é um ponto de encontro para quem busca viver momentos especiais. Seja para curtir com amigos, família ou simplesmente aproveitar novas experiências, o AstroFest é o lugar certo para quem busca entretenimento. Não fique de fora! Junte-se a nós e venha fazer parte dessa festa única que vai marcar o seu calendário. Estamos esperando por você!</p>
 
     <div class="info-evento">
       <div class="info-item">
         <i class="bi bi-calendar"></i>
-        <span>17 de Setembro de 2025</span>
+        <span>21 de Setembro de 2025</span>
       </div>
       <div class="info-item">
         <i class="bi bi-geo-alt-fill"></i>
-        <span>Local do Evento</span>
+        <span>Boa Viagem - CE</span>
       </div>
     </div>
   </section>
@@ -166,19 +166,37 @@
   <section class="ingressos">
     <h2 class="texto-ingressos">Ingressos</h2>
     <div class="lista-ingressos">
+
+      <!-- ingresso Padrão -->
       <div class="ingresso">
-        <div class="imagem-ingresso">[Imagem]</div>
+        <h3 class="nome-ingresso">Ingresso Padrão</h3>
+        <p class="descricao-ingresso">Acesso geral ao festival, aproveitando as atrações principais.</p>
+        <div class="beneficios-ingresso">
+        Entrada do público geral | Acesso aos palcos
+        </div>
         <p class="preco-ingresso">R$ 100</p>
         <button class="botao-comprar">Comprar</button>
       </div>
+
+      <!-- ingresso VIP -->
       <div class="ingresso">
-        <div class="imagem-ingresso">[Imagem]</div>
-        <p class="preco-ingresso">R$ 100</p>
+        <h3 class="nome-ingresso">Ingresso VIP</h3>
+        <p class="descricao-ingresso">Acesso com privilégios especiais, incluindo área VIP e brindes exclusivos.</p>
+        <div class="beneficios-ingresso">
+        Entrada rápida | Área VIP | Brinde exclusivo
+        </div>
+        <p class="preco-ingresso">R$ 250</p>
         <button class="botao-comprar">Comprar</button>
       </div>
+
+      <!-- ingresso Premium -->
       <div class="ingresso">
-        <div class="imagem-ingresso">[Imagem]</div>
-        <p class="preco-ingresso">R$ 100</p>
+        <h3 class="nome-ingresso">Ingresso Premium</h3>
+        <p class="descricao-ingresso">Experiência completa com acesso aos bastidores e encontro com artistas.</p>
+        <div class="beneficios-ingresso">
+        Tudo do VIP | Bastidores | Encontro com artistas
+        </div>
+        <p class="preco-ingresso">R$ 500</p>
         <button class="botao-comprar">Comprar</button>
       </div>
     </div>
@@ -194,26 +212,32 @@
     <div class="lista-atracoes">
 
       <div class="atracao">
-        <div class="imagem-atracao">[Imagem]</div>
+        <div class="imagem-atracao atracao1"></div>
         <div class="info-atracao">
-          <h3>Informações</h3>
-          <p>descrição das informações descrição das informações descrição das informações</p>
+          <h3>Léo Magalhães</h3>
+          <p>Domingo, 20h | Palco Principal</p>
+          <p>--------------------------------</p>
+          <p>Energia contagiante com os grandes sucessos do artista.</p>
         </div>
       </div>
 
       <div class="atracao">
-        <div class="imagem-atracao">[Imagem]</div>
+        <div class="imagem-atracao atracao2"></div>
         <div class="info-atracao">
-          <h3>Informações</h3>
-          <p>descrição das informações descrição das informações descrição das informações</p>
+          <h3>Cachorrão do Brega</h3>
+          <p>Domingo, 21h | Palco Principal</p>
+          <p>--------------------------------</p>
+          <p>Energia contagiante com os grandes sucessos do artista.</p>
         </div>
       </div>
 
       <div class="atracao">
-        <div class="imagem-atracao">[Imagem]</div>
+        <div class="imagem-atracao atracao3"></div>
         <div class="info-atracao">
-          <h3>Informações</h3>
-          <p>descrição das informações descrição das informações descrição das informações</p>
+          <h3>Amado Batista</h3>
+          <p>Domingo, 22h | Palco Principal</p>
+          <p>--------------------------------</p>
+          <p>Energia contagiante com os grandes sucessos do artista.</p>
         </div>
       </div>
 

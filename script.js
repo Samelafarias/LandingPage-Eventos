@@ -1,9 +1,52 @@
+// LETICIA
 // modo escuro
 document.querySelectorAll("#btn-dark-mode, #btn-dark-mode-mobile").forEach((btn) => {
   btn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
   });
 });
+
+// GABRIEL ALVES
+// alto constraste
+const body = document.body;
+
+const contrastButtonDesktop = document.getElementById("btn-contrast-desktop");
+const contrastButtonMobile = document.getElementById("btn-contrast-mobile");
+
+const toggleContrast = () => {
+    body.classList.toggle("alto-contraste");
+};
+
+contrastButtonDesktop?.addEventListener("click", toggleContrast);
+contrastButtonMobile?.addEventListener("click", toggleContrast);
+
+// LETICIA
+  function iniciarContador() {
+    // data do evento: 21 de setembro de 2025 às 00:00
+    const dataEvento = new Date("Sep 21, 2025 00:00:00").getTime();
+    const elemento = document.querySelector(".contador");
+
+    const timer = setInterval(() => {
+      const agora = new Date().getTime();
+      const diferenca = dataEvento - agora;
+
+      if (diferenca <= 0) {
+        clearInterval(timer);
+        elemento.textContent = "O AstroFest já começou! 🚀";
+        return;
+      }
+
+      // cálculo de dias, horas, minutos e segundos
+      const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+      elemento.textContent = `Faltam ${dias}d ${horas}h ${minutos}m ${segundos}s para o AstroFest`;
+    }, 1000);
+  }
+
+  iniciarContador();
 
 // carrossel
 let index = 0;
@@ -42,6 +85,7 @@ let index = 0;
 
   showSlide(index);
 
+// LETICIA
 // seção de cadastro
   const modal = document.getElementById("modal-cadastro");
   const btn = document.querySelector(".btn-cadastrar");
@@ -68,7 +112,14 @@ let index = 0;
     }
   });
 
-//ORGANIZADOR : MARU
+// MARCO ROCHA 
+// confirmação do cadastro
+  document.querySelector(".form-cadastro").addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Cadastro feito com sucesso.");
+});
+
+//ORGANIZADOR : MÁRIO
 // base de dados simulada
 let participantes = [
   { id: 1, nome: "Participante A", email: "email.a@server.com" },
@@ -301,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
   atualizarExibicao();
 });
 
-
+// LETICIA
 // seção do menu mobile
 const openMenu = document.getElementById("open-menu");
 const closeMenu = document.getElementById("close-menu");
